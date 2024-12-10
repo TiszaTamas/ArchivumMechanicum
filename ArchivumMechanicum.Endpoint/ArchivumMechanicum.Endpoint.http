@@ -1,0 +1,6 @@
+@ArchivumMechanicum.Endpoint_HostAddress = http://localhost:5132
+
+GET {{ArchivumMechanicum.Endpoint_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
