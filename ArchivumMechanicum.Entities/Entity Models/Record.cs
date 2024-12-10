@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using ArchivumMechanicum.Entities.Helpers;
 
 namespace ArchivumMechanicum.Entities.Entity_Models
 {
-    public class Record
+    public class Record : IdentityEntity
     {
         //        2. Table: Records
         //Current Variables:
@@ -45,5 +46,11 @@ namespace ArchivumMechanicum.Entities.Entity_Models
 
         [StringLength(50)]
         public string ArchivingDate { get; set; }
+
+        [NotMapped]
+        public virtual Relic? Relic { get; set; }
+
+        [StringLength(50)]
+        public string RelicIdentification { get; set; }
     }
 }

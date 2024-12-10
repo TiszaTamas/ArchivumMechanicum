@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArchivumMechanicum.Entities.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,7 +11,7 @@ using System.Xml.Linq;
 
 namespace ArchivumMechanicum.Entities.Entity_Models
 {
-    public class Location
+    public class Location : IdentityEntity
     {
         //        3. Table: Places/Planets
         //Current Variables:
