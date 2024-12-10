@@ -11,11 +11,11 @@ namespace ArchivumMechanicum.Data
 {
     public class ArchivumContextus : IdentityDbContext
     {
-        public DbSet<Location> Territorium { get; set; }
+        public DbSet<Location> Locations { get; set; }
 
-        public DbSet<Relic> Artefactum { get; set; }
+        public DbSet<Relic> Relics { get; set; }
 
-        public DbSet<Record> Archivum { get; set; }
+        public DbSet<Record> Records { get; set; }
 
         public ArchivumContextus(DbContextOptions<ArchivumContextus> ctx)
             : base(ctx)

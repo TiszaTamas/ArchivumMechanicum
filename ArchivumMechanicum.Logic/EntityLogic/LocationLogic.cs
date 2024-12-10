@@ -15,7 +15,7 @@ namespace ArchivumMechanicum.Logic.EntityLogic
 
         public LocationLogic(Repositorium<Location> repositorium)
         {
-            Repositorium = repositorium;
+            this.Repositorium = repositorium;
         }
 
         public void CreateLocation(Location loc)
