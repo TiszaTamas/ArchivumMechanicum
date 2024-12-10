@@ -12,7 +12,7 @@ builder.Services.AddTransient<LocationLogic>();
 builder.Services.AddTransient<RecordLogic>();
 builder.Services.AddTransient<RelicLogic>();
 
-builder.Services.AddDbContext<ArchivumContextus>(options =>
+builder.Services.AddDbContext<ArchivumContext>(options =>
 {
     options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ArchivumMechanicumDb;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True");
     options.UseLazyLoadingProxies();

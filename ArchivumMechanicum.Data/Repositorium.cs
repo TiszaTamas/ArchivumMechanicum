@@ -11,9 +11,9 @@ namespace ArchivumMechanicum.Data
 
     public class Repositorium<T> where T : class, IIdentityEntity
     {
-        ArchivumContextus ctx;
+        ArchivumContext ctx;
 
-        public Repositorium(ArchivumContextus ctx)
+        public Repositorium(ArchivumContext ctx)
         {
             this.ctx = ctx;
         }

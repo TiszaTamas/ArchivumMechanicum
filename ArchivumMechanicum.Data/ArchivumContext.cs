@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ArchivumMechanicum.Data
 {
-    public class ArchivumContextus : IdentityDbContext
+    public class ArchivumContext : IdentityDbContext
     {
         public DbSet<Location> Locations { get; set; }
 
@@ -17,7 +17,7 @@ namespace ArchivumMechanicum.Data
 
         public DbSet<Record> Records { get; set; }
 
-        public ArchivumContextus(DbContextOptions<ArchivumContextus> ctx)
+        public ArchivumContext(DbContextOptions<ArchivumContext> ctx)
             : base(ctx)
         {
 
@@ -41,13 +41,13 @@ namespace ArchivumMechanicum.Data
                 .HasMany(rel => rel.Records)
                 .WithOne(rec=> rec.Relic)
                 .HasForeignKey(rec=>rec.RelicIdentification)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Location>()
                 .HasMany(l=> l.Records)
                 .WithOne(r=>r.Location)
                 .HasForeignKey(r=>r.LocationIdentification)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             base.OnModelCreating(modelBuilder);
         }

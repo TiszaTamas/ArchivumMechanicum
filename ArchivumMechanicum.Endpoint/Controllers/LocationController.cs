@@ -1,10 +1,12 @@
-﻿using ArchivumMechanicum.Entities.Entity_Models;
+﻿using ArchivumMechanicum.Entities.Dtos;
+using ArchivumMechanicum.Entities.Entity_Models;
 using ArchivumMechanicum.Logic.EntityLogic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArchivumMechanicum.Endpoint.Controllers
 {
     [Route("api/[controller]")]
+    [ApiController]
     public class LocationController : Controller
     {
         LocationLogic logic;
@@ -15,7 +17,7 @@ namespace ArchivumMechanicum.Endpoint.Controllers
         }
 
         [HttpPost]
-        public void AddLocation(Location loc)
+        public void AddLocation(LocationCreateDto loc)
         {
             logic.CreateLocation(loc);
         }

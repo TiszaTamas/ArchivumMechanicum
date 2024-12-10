@@ -1,4 +1,5 @@
 ﻿using ArchivumMechanicum.Data;
+using ArchivumMechanicum.Entities.Dtos;
 using ArchivumMechanicum.Entities.Entity_Models;
 using System;
 using System.Collections.Generic;
@@ -12,15 +13,19 @@ namespace ArchivumMechanicum.Logic.EntityLogic
     {
         Repositorium<Location> Repositorium;
 
-
         public LocationLogic(Repositorium<Location> repositorium)
         {
             this.Repositorium = repositorium;
         }
 
-        public void CreateLocation(Location loc)
+        public void CreateLocation(LocationCreateDto loc)
         {
-            Location l = loc;
+            var l = new Location()
+            {
+                Name = loc.Name,
+                Sector = loc.Sector,
+                Custodian = loc.Custodian,
+            };
 
             if (Repositorium.GetAll().FirstOrDefault(x => x.Name == l.Name) == null)
             {

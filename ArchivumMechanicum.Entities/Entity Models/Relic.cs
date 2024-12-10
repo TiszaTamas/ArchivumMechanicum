@@ -14,19 +14,14 @@ namespace ArchivumMechanicum.Entities.Entity_Models
 {
     public class Relic : IIdentityEntity
     {
-        //        1. Table: Relics
-        //Current Variables:
-
-        //name(good, intuitive)
-        //type(e.g., weapon, artifact, machine spirit—works well)
-        //description/essence(could be essence or specification for an archaic feel)
-        //records(relation to Records table; keep)
-        //origin(relation to Places table; consider naming provenance or forge_origin for a thematic touch)
-        //found(relation to Places table; rename discovery_site for clarity)
-        //Suggestions:
-
-        //Add status(e.g., "functional," "damaged," "lost")
-        //Add classification(e.g., archeotech, xenotech, heretekal)
+        public Relic(string identification, string designation, string classification, string description, string status)
+        {
+            Identification = Guid.NewGuid().ToString();
+            Designation = designation;
+            Classification = classification;
+            Description = description;
+            Status = status;
+        }
 
         /// <summary>
         /// Id for Relic using Guid.

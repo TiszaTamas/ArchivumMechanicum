@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ArchivumMechanicum.Endpoint.Controllers
 {
     [Route("api/[controller]")]
+    [ApiController]
     public class RecordController : Controller
     {
         RecordLogic logic;
