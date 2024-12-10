@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArchivumMechanicum.Entities.Helpers
 {
-    public interface IdentityEntity
+    public interface IIdentityEntity
     {
         public string Identification { get; set; }
     }

@@ -11,7 +11,7 @@ using System.Xml.Linq;
 
 namespace ArchivumMechanicum.Entities.Entity_Models
 {
-    public class Location : IdentityEntity
+    public class Location : IIdentityEntity
     {
         //        3. Table: Places/Planets
         //Current Variables:
@@ -48,5 +48,8 @@ namespace ArchivumMechanicum.Entities.Entity_Models
 
         [NotMapped]
         public virtual ICollection<Relic>? Relics { get; set; }
+
+        [NotMapped]
+        public virtual ICollection<Record>? Records { get; set; }
     }
 }

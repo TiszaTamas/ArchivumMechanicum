@@ -10,7 +10,7 @@ using ArchivumMechanicum.Entities.Helpers;
 
 namespace ArchivumMechanicum.Entities.Entity_Models
 {
-    public class Record : IdentityEntity
+    public class Record : IIdentityEntity
     {
         //        2. Table: Records
         //Current Variables:
@@ -52,5 +52,11 @@ namespace ArchivumMechanicum.Entities.Entity_Models
 
         [StringLength(50)]
         public string RelicIdentification { get; set; }
+
+        [NotMapped]
+        public virtual Location? Location { get; set; }
+
+        [StringLength(50)]
+        public string LocationIdentification { get; set; }
     }
 }

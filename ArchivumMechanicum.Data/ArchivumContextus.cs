@@ -37,6 +37,18 @@ namespace ArchivumMechanicum.Data
                 .HasForeignKey(r => r.LocationIdentification)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Relic>()
+                .HasMany(rel => rel.Records)
+                .WithOne(rec=> rec.Relic)
+                .HasForeignKey(rec=>rec.RelicIdentification)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Location>()
+                .HasMany(l=> l.Records)
+                .WithOne(r=>r.Location)
+                .HasForeignKey(r=>r.LocationIdentification)
+                .OnDelete(DeleteBehavior.Cascade);
+
             base.OnModelCreating(modelBuilder);
         }
     }

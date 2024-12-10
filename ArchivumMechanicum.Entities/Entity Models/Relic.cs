@@ -12,7 +12,7 @@ using ArchivumMechanicum.Entities.Helpers;
 
 namespace ArchivumMechanicum.Entities.Entity_Models
 {
-    public class Relic : IdentityEntity
+    public class Relic : IIdentityEntity
     {
         //        1. Table: Relics
         //Current Variables:

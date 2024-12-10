@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ArchivumMechanicum.Data
 {
 
-    public class Repositorium<T> where T : class, IdentityEntity
+    public class Repositorium<T> where T : class, IIdentityEntity
     {
         ArchivumContextus ctx;
 
