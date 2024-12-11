@@ -1,0 +1,178 @@
+{
+  "locations": [
+    {
+      "name": "Forge World Mars",
+      "coordinates": "0.000,1.523",
+      "currentController": "Fabricator-General"
+    },
+    {
+      "name": "Forge World Metalica",
+      "coordinates": "1.234,4.567",
+      "currentController": "The Iron Council"
+    },
+    {
+      "name": "Orbital Station Ganymede",
+      "coordinates": "2.345,5.678",
+      "currentController": "Explorator Fleet Gamma-7"
+    },
+    {
+      "name": "Shrine of St. Icarus",
+      "coordinates": "3.456,6.789",
+      "currentController": "Martian Priesthood"
+    },
+    {
+      "name": "Blackstone Fortress Alpha",
+      "coordinates": "4.567,7.890",
+      "currentController": "Mechanicus Vanguard"
+    },
+    {
+      "name": "Archeotech Vault Theta-13",
+      "coordinates": "5.678,8.901",
+      "currentController": "Tech-Lord Barachiel"
+    },
+    {
+      "name": "Forge World Ryza",
+      "coordinates": "6.789,9.012",
+      "currentController": "High Magos Axion"
+    },
+    {
+      "name": "Vault of Phaeton",
+      "coordinates": "7.890,0.123",
+      "currentController": "Magos Militant Octavian"
+    },
+    {
+      "name": "Explorator Outpost Sigma-9",
+      "coordinates": "8.901,1.234",
+      "currentController": "Archmagos Explorator"
+    },
+    {
+      "name": "Forgotten Forge of Medusa",
+      "coordinates": "9.012,2.345",
+      "currentController": "The Iron Hands Chapter"
+    }
+  ],
+  "relics": [
+    {
+      "name": "Omnissian Cogitator",
+      "type": "Data Processor",
+      "description": "An ancient device capable of decrypting the oldest runes.",
+      "origin": "Forge World Mars",
+      "found": "Forge World Mars"
+    },
+    {
+      "name": "Mechanicus Blade Sanctified",
+      "type": "Weapon",
+      "description": "A relic blessed by the Tech-Priests of Ryza.",
+      "origin": "Forge World Ryza",
+      "found": "Shrine of St. Icarus"
+    },
+    {
+      "name": "Transmechanic Interface Key",
+      "type": "Tool",
+      "description": "Grants access to sealed archeotech vaults.",
+      "origin": "Archeotech Vault Theta-13",
+      "found": "Vault of Phaeton"
+    },
+    {
+      "name": "Plasma Reactor Core",
+      "type": "Technology",
+      "description": "A functional core from an ancient starship.",
+      "origin": "Forge World Metalica",
+      "found": "Explorator Outpost Sigma-9"
+    },
+    {
+      "name": "Voidship Navigation Chart",
+      "type": "Artifact",
+      "description": "Records the passage of a lost fleet.",
+      "origin": "Blackstone Fortress Alpha",
+      "found": "Orbital Station Ganymede"
+    },
+    {
+      "name": "Sanctified Servo-Skull",
+      "type": "Servitor",
+      "description": "Contains the wisdom of a revered Magos.",
+      "origin": "Shrine of St. Icarus",
+      "found": "Forge World Mars"
+    },
+    {
+      "name": "Cog Mechanica Prime",
+      "type": "Relic",
+      "description": "A holy cogwheel said to be touched by the Omnissiah.",
+      "origin": "Forge World Ryza",
+      "found": "Forge World Metalica"
+    },
+    {
+      "name": "Macro-Plasma Annihilator",
+      "type": "Weapon",
+      "description": "An experimental weapon prototype.",
+      "origin": "Forge World Ryza",
+      "found": "Forge World Ryza"
+    },
+    {
+      "name": "Memory Crystal Theta-8",
+      "type": "Artifact",
+      "description": "Holds encrypted knowledge from the Dark Age of Technology.",
+      "origin": "Explorator Outpost Sigma-9",
+      "found": "Forgotten Forge of Medusa"
+    },
+    {
+      "name": "Blessed Banner of Mars",
+      "type": "Relic",
+      "description": "An ancient standard carried by Mechanicus armies.",
+      "origin": "Forge World Mars",
+      "found": "Forge World Mars"
+    }
+  ],
+  "records": [
+    {
+      "name": "Data-Log 404.M41",
+      "information": "Discovery of archeotech vault Theta-13.",
+      "timeOfCreation": "404.M41"
+    },
+    {
+      "name": "Data-Log 245.M41",
+      "information": "First exploration of Blackstone Fortress Alpha.",
+      "timeOfCreation": "245.M41"
+    },
+    {
+      "name": "Data-Log 556.M41",
+      "information": "Sanctification of the Mechanicus Blade.",
+      "timeOfCreation": "556.M41"
+    },
+    {
+      "name": "Data-Log 110.M41",
+      "information": "Activation of Voidship Navigation Charts.",
+      "timeOfCreation": "110.M41"
+    },
+    {
+      "name": "Data-Log 901.M41",
+      "information": "Plasma Reactor Core recovered from Ryza.",
+      "timeOfCreation": "901.M41"
+    },
+    {
+      "name": "Data-Log 700.M41",
+      "information": "Blessing of the Cog Mechanica Prime.",
+      "timeOfCreation": "700.M41"
+    },
+    {
+      "name": "Data-Log 300.M41",
+      "information": "Macro-Plasma Annihilator trialed on Forge World Metalica.",
+      "timeOfCreation": "300.M41"
+    },
+    {
+      "name": "Data-Log 850.M41",
+      "information": "Memory Crystal Theta-8 decrypted.",
+      "timeOfCreation": "850.M41"
+    },
+    {
+      "name": "Data-Log 100.M41",
+      "information": "First sighting of Explorator Fleet Gamma-7.",
+      "timeOfCreation": "100.M41"
+    },
+    {
+      "name": "Data-Log 500.M41",
+      "information": "Banner of Mars recovered and sanctified.",
+      "timeOfCreation": "500.M41"
+    }
+  ]
+}

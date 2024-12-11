@@ -17,6 +17,8 @@ namespace ArchivumMechanicum.Data
 
         public DbSet<Record> Records { get; set; }
 
+        public DbSet<AppUser> AppUsers { get; set; }
+
         public ArchivumContext(DbContextOptions<ArchivumContext> ctx)
             : base(ctx)
         {

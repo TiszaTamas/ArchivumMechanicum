@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -13,11 +14,6 @@ namespace ArchivumMechanicum.Entities.Entity_Models
 {
     public class Location : IIdentityEntity
     {
-        [StringLength(50)]
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Identification {  get; set; }
-
         public Location()
         {
         }
@@ -33,16 +29,21 @@ namespace ArchivumMechanicum.Entities.Entity_Models
         }
 
         [StringLength(50)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public string Identification { get; set; }
+
+        [StringLength(50)]
         public string Sector {  get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }
 
         [StringLength(50)]
-        public string Significance { get; set; }
+        public string? Significance { get; set; }
 
         [StringLength(50)]
-        public string Coordinates { get; set; }
+        public string? Coordinates { get; set; }
 
         [StringLength(50)]
         public string Custodian { get; set; }
