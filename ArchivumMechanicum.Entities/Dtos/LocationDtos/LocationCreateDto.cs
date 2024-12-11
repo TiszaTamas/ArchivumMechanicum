@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArchivumMechanicum.Entities.Dtos
+namespace ArchivumMechanicum.Entities.Dtos.LocationDtos
 {
     public class LocationCreateDto
     {
