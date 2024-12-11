@@ -62,10 +62,10 @@ namespace ArchivumMechanicum.Logic.EntityLogic
             Repositorium.DeleteById(id);
         }
 
-        public Location GetLocationById(string id)
+        public LocationViewDto GetLocationById(string id)
         {
             var loc = Repositorium.FindById(id);
-            return loc;
+            return dtoProvider.Mapper.Map<LocationViewDto>(loc);
         }
 
         

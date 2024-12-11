@@ -62,7 +62,7 @@ namespace ArchivumMechanicum.Entities.Entity_Models
         public virtual ICollection<Record>? Records { get; set; }
 
         /// <summary>
-        /// The Locíation tied to the current Relic.
+        /// The Location tied to the current Relic.
         /// </summary>
         [NotMapped]
         public virtual Location? Location { get; set; }

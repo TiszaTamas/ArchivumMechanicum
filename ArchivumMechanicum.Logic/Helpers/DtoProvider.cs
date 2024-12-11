@@ -1,5 +1,7 @@
 ﻿using ArchivumMechanicum.Data;
 using ArchivumMechanicum.Entities.Dtos.LocationDtos;
+using ArchivumMechanicum.Entities.Dtos.RecordDtos;
+using ArchivumMechanicum.Entities.Dtos.RelicDtos;
 using ArchivumMechanicum.Entities.Dtos.UserDtos;
 using ArchivumMechanicum.Entities.Entity_Models;
 using AutoMapper;
@@ -38,9 +40,24 @@ namespace ArchivumMechanicum.Logic.Helpers
                     dest.IsAdmin = userManager.IsInRoleAsync(src, "Admin").Result;
                 });
 
+                
 
                 cfg.CreateMap<Location, LocationViewDto>();
                 cfg.CreateMap<LocationCreateDto, Location>();
+
+                cfg.CreateMap<Relic, RelicViewDto>()
+                .AfterMap((src,dest) =>
+                {
+                    if (src.Location != null)
+                { 
+                        dest.FoundLocationName = src.Location.Name;
+                }
+                });
+                cfg.CreateMap<Record, RecordShortViewDto>();
+                cfg.CreateMap<RelicCreateDto, Relic>();
+
+                cfg.CreateMap<Record, RecordViewDto>();
+                cfg.CreateMap<RecordCreateDto, Record>();
             });
 
             Mapper = new Mapper(config);

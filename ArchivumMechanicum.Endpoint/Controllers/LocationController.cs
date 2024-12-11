@@ -47,7 +47,7 @@ namespace ArchivumMechanicum.Endpoint.Controllers
         }
 
         [HttpGet("{id}")]
-        public Location GetLocation(string id)
+        public LocationViewDto GetLocation(string id)
         {
             return logic.GetLocationById(id);
         }

@@ -38,13 +38,13 @@ namespace ArchivumMechanicum.Entities.Entity_Models
         public string Scribe { get; set; }
 
         [StringLength(50)]
-        public string Condition { get; set; }
+        public string? Condition { get; set; }
 
         [StringLength(50)]
-        public string Classification { get; set; }
+        public string? Classification { get; set; }
 
         [StringLength(50)]
-        public string ArchivingDate { get; set; }
+        public string? ArchivingDate { get; set; }
 
         [NotMapped]
         public virtual Relic? Relic { get; set; }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ArchivumMechanicum.Entities.Entity_Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,9 @@ namespace ArchivumMechanicum.Entities.Dtos.LocationDtos
 
             public string Sector { get; set; } = "";
 
-            public int NumberOfRelics { get; set; }
+            public IEnumerable<Relic>? Relics { get; set; }
+
+            public IEnumerable<Record>? Records { get; set; }
         }
     }
 }
