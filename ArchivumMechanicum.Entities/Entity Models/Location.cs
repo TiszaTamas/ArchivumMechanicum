@@ -34,7 +34,7 @@ namespace ArchivumMechanicum.Entities.Entity_Models
         public string Identification { get; set; }
 
         [StringLength(50)]
-        public string Sector {  get; set; }
+        public string? Sector {  get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }

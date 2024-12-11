@@ -3,52 +3,52 @@
     {
       "name": "Forge World Mars",
       "coordinates": "0.000,1.523",
-      "currentController": "Fabricator-General"
+      "custodian": "Fabricator-General"
     },
     {
       "name": "Forge World Metalica",
       "coordinates": "1.234,4.567",
-      "currentController": "The Iron Council"
+      "custodian": "The Iron Council"
     },
     {
       "name": "Orbital Station Ganymede",
       "coordinates": "2.345,5.678",
-      "currentController": "Explorator Fleet Gamma-7"
+      "custodian": "Explorator Fleet Gamma-7"
     },
     {
       "name": "Shrine of St. Icarus",
       "coordinates": "3.456,6.789",
-      "currentController": "Martian Priesthood"
+      "custodian": "Martian Priesthood"
     },
     {
       "name": "Blackstone Fortress Alpha",
       "coordinates": "4.567,7.890",
-      "currentController": "Mechanicus Vanguard"
+      "custodian": "Mechanicus Vanguard"
     },
     {
       "name": "Archeotech Vault Theta-13",
       "coordinates": "5.678,8.901",
-      "currentController": "Tech-Lord Barachiel"
+      "custodian": "Tech-Lord Barachiel"
     },
     {
       "name": "Forge World Ryza",
       "coordinates": "6.789,9.012",
-      "currentController": "High Magos Axion"
+      "custodian": "High Magos Axion"
     },
     {
       "name": "Vault of Phaeton",
       "coordinates": "7.890,0.123",
-      "currentController": "Magos Militant Octavian"
+      "custodian": "Magos Militant Octavian"
     },
     {
       "name": "Explorator Outpost Sigma-9",
       "coordinates": "8.901,1.234",
-      "currentController": "Archmagos Explorator"
+      "custodian": "Archmagos Explorator"
     },
     {
       "name": "Forgotten Forge of Medusa",
       "coordinates": "9.012,2.345",
-      "currentController": "The Iron Hands Chapter"
+      "custodian": "The Iron Hands Chapter"
     }
   ],
   "relics": [

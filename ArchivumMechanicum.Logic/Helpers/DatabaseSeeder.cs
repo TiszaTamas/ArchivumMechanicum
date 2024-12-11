@@ -1,4 +1,5 @@
 ﻿using ArchivumMechanicum.Data;
+using ArchivumMechanicum.Entities.Entity_Models;
 using ArchivumMechanicum.Entities.Helpers;
 using Newtonsoft.Json;
 using System;
@@ -11,16 +12,17 @@ namespace ArchivumMechanicum.Logic.Helpers
 {
     public class DatabaseSeeder
     {
-        private readonly ArchivumContext ctx;
+        Repositorium<Location> locationRepo;
 
-        public DatabaseSeeder(ArchivumContext context)
+        public DatabaseSeeder(Repositorium<Location> locationRepo)
         {
-            ctx = context;
+            this.locationRepo = locationRepo;
         }
 
         public async Task PopulateDatabaseAsync()
         {
-            if (!ctx.Locations.Any() && !ctx.Relics.Any() && !ctx.Records.Any())
+            //!ctx.Locations.Any() && !ctx.Relics.Any() && !ctx.Records.Any()
+            if (!locationRepo.GetAll().Any())
             {
                 var jsonData = System.IO.File.ReadAllText("seedData.json");
 
@@ -28,10 +30,10 @@ namespace ArchivumMechanicum.Logic.Helpers
 
                 if (seedData != null)
                 {
-                    ctx.Locations.AddRange(seedData.Locations);
-                    ctx.Relics.AddRange(seedData.Relics);
-                    ctx.Records.AddRange(seedData.Records);
-                    ctx.SaveChanges();
+                    foreach (var location in seedData.Locations)
+                    {
+                        locationRepo.Create(location);
+                    }
                 }
             }
             else
