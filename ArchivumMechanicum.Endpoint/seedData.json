@@ -49,130 +49,211 @@
       "name": "Forgotten Forge of Medusa",
       "coordinates": "9.012,2.345",
       "custodian": "The Iron Hands Chapter"
+    },
+    {
+      "name": "Luna Command Facility",
+      "coordinates": "10.345,3.678",
+      "custodian": "Mechanicus Expeditionary Corps"
+    },
+    {
+      "name": "Tomb of Sol Mechanica",
+      "coordinates": "11.456,4.789",
+      "custodian": "Archivist Order Prime"
+    },
+    {
+      "name": "Relic Hall of Phaeton",
+      "coordinates": "12.567,5.890",
+      "custodian": "Forge-Lord Helarion"
+    },
+    {
+      "name": "Omnisiah Cathedral Ryza",
+      "coordinates": "13.678,6.901",
+      "custodian": "High Magos Sanctus"
+    },
+    {
+      "name": "Sacred Vault Castigator",
+      "coordinates": "14.789,7.012",
+      "custodian": "Forge Vanguard Cohort"
+    },
+    {
+      "name": "Machine Shrine Delta-5",
+      "coordinates": "15.890,8.123",
+      "custodian": "Tech-Seer Victarion"
+    },
+    {
+      "name": "Hall of St. Archeus",
+      "coordinates": "16.901,9.234",
+      "custodian": "Martian Synodium"
+    },
+    {
+      "name": "Forge Ruins of Selenius",
+      "coordinates": "17.012,0.345",
+      "custodian": "Xenological Sub-Division"
+    },
+    {
+      "name": "Outpost Mechanica Ultima",
+      "coordinates": "18.123,1.456",
+      "custodian": "Tech-Adept Militus"
+    },
+    {
+      "name": "Cogitator Vault Alpha-6",
+      "coordinates": "19.234,2.567",
+      "custodian": "Relic Archivist Prime"
     }
   ],
   "relics": [
     {
-      "name": "Omnissian Cogitator",
-      "type": "Data Processor",
-      "description": "An ancient device capable of decrypting the oldest runes.",
+      "designation": "Omnissian Cogitator",
+      "classification": "Data Processor",
+      "description": "Ancient runic decryptor.",
       "origin": "Forge World Mars",
       "found": "Forge World Mars"
     },
     {
-      "name": "Mechanicus Blade Sanctified",
-      "type": "Weapon",
-      "description": "A relic blessed by the Tech-Priests of Ryza.",
+      "designation": "Sanctified Mechanicus Blade",
+      "classification": "Weapon",
+      "description": "Tech-Priests’ relic blade.",
       "origin": "Forge World Ryza",
       "found": "Shrine of St. Icarus"
     },
     {
-      "name": "Transmechanic Interface Key",
-      "type": "Tool",
-      "description": "Grants access to sealed archeotech vaults.",
+      "designation": "Vault Key Theta-12",
+      "classification": "Tool",
+      "description": "Unlocks Mechanicus relics.",
       "origin": "Archeotech Vault Theta-13",
       "found": "Vault of Phaeton"
     },
     {
-      "name": "Plasma Reactor Core",
-      "type": "Technology",
-      "description": "A functional core from an ancient starship.",
+      "designation": "Plasma Core Alpha",
+      "classification": "Power Source",
+      "description": "Ancient plasma generator.",
       "origin": "Forge World Metalica",
       "found": "Explorator Outpost Sigma-9"
     },
     {
-      "name": "Voidship Navigation Chart",
-      "type": "Artifact",
-      "description": "Records the passage of a lost fleet.",
+      "designation": "Stellar Navigation Array",
+      "classification": "Artifact",
+      "description": "Navigates ancient routes.",
       "origin": "Blackstone Fortress Alpha",
       "found": "Orbital Station Ganymede"
     },
     {
-      "name": "Sanctified Servo-Skull",
-      "type": "Servitor",
-      "description": "Contains the wisdom of a revered Magos.",
+      "designation": "Servo-Skull St. Malchior",
+      "classification": "Servitor",
+      "description": "Contains sacred data.",
       "origin": "Shrine of St. Icarus",
       "found": "Forge World Mars"
     },
     {
-      "name": "Cog Mechanica Prime",
-      "type": "Relic",
-      "description": "A holy cogwheel said to be touched by the Omnissiah.",
+      "designation": "Cog Mechanica Alpha",
+      "classification": "Relic",
+      "description": "Symbol of the Omnissiah.",
       "origin": "Forge World Ryza",
       "found": "Forge World Metalica"
     },
     {
-      "name": "Macro-Plasma Annihilator",
-      "type": "Weapon",
-      "description": "An experimental weapon prototype.",
+      "designation": "Macro-Plasma Prototype",
+      "classification": "Experimental Weapon",
+      "description": "Early plasma rifle tech.",
       "origin": "Forge World Ryza",
       "found": "Forge World Ryza"
     },
     {
-      "name": "Memory Crystal Theta-8",
-      "type": "Artifact",
-      "description": "Holds encrypted knowledge from the Dark Age of Technology.",
+      "designation": "Memory Crystal Sigma",
+      "classification": "Artifact",
+      "description": "Encrypted Dark Age data.",
       "origin": "Explorator Outpost Sigma-9",
       "found": "Forgotten Forge of Medusa"
     },
     {
-      "name": "Blessed Banner of Mars",
-      "type": "Relic",
-      "description": "An ancient standard carried by Mechanicus armies.",
+      "designation": "Banner of Mars Prime",
+      "classification": "Relic",
+      "description": "Sacred Mechanicus symbol.",
       "origin": "Forge World Mars",
       "found": "Forge World Mars"
     }
   ],
   "records": [
     {
-      "name": "Data-Log 404.M41",
-      "information": "Discovery of archeotech vault Theta-13.",
-      "timeOfCreation": "404.M41"
+      "title": "Relic History of Mars",
+      "inscription": "An account of relic creation.",
+      "scribe": "Archivist Mechanicus",
+      "archivingdate": "404.M41",
+      "relicName": "Omnissian Cogitator",
+      "locationName": "Forge World Mars"
     },
     {
-      "name": "Data-Log 245.M41",
-      "information": "First exploration of Blackstone Fortress Alpha.",
-      "timeOfCreation": "245.M41"
+      "title": "Sanctification of Blade Ryza",
+      "inscription": "Holy rites for Mechanicus Blades.",
+      "scribe": "High Magos Ryza",
+      "archivingdate": "245.M41",
+      "relicName": "Sanctified Mechanicus Blade",
+      "locationName": "Forge World Ryza"
     },
     {
-      "name": "Data-Log 556.M41",
-      "information": "Sanctification of the Mechanicus Blade.",
-      "timeOfCreation": "556.M41"
+      "title": "Unlocking Theta Relics",
+      "inscription": "Key Theta-12 found in Vault.",
+      "scribe": "Unknown",
+      "archivingdate": "556.M41",
+      "relicName": "Vault Key Theta-12",
+      "locationName": "Archeotech Vault Theta-13"
     },
     {
-      "name": "Data-Log 110.M41",
-      "information": "Activation of Voidship Navigation Charts.",
-      "timeOfCreation": "110.M41"
+      "title": "Power Core Discovery",
+      "inscription": "Details of ancient power cores.",
+      "scribe": "Magos Explorator",
+      "archivingdate": "110.M41",
+      "relicName": "Plasma Core Alpha",
+      "locationName": "Forge World Metalica"
     },
     {
-      "name": "Data-Log 901.M41",
-      "information": "Plasma Reactor Core recovered from Ryza.",
-      "timeOfCreation": "901.M41"
+      "title": "Blackstone Maps Unearthed",
+      "inscription": "Ancient voidship routes recorded.",
+      "scribe": "Mechanicus Cartographer",
+      "archivingdate": "901.M41",
+      "relicName": "Stellar Navigation Array",
+      "locationName": "Blackstone Fortress Alpha"
     },
     {
-      "name": "Data-Log 700.M41",
-      "information": "Blessing of the Cog Mechanica Prime.",
-      "timeOfCreation": "700.M41"
+      "title": "Servo-Skull Decryption",
+      "inscription": "Insights from Servo-Skull Malchior.",
+      "scribe": "Archivist Prime",
+      "archivingdate": "700.M41",
+      "relicName": "Servo-Skull St. Malchior",
+      "locationName": "Shrine of St. Icarus"
     },
     {
-      "name": "Data-Log 300.M41",
-      "information": "Macro-Plasma Annihilator trialed on Forge World Metalica.",
-      "timeOfCreation": "300.M41"
+      "title": "The Cog Mechanica Prime",
+      "inscription": "Blessing of sacred cogs.",
+      "scribe": "Magos Dominus",
+      "archivingdate": "300.M41",
+      "relicName": "Cog Mechanica Alpha",
+      "locationName": "Forge World Ryza"
     },
     {
-      "name": "Data-Log 850.M41",
-      "information": "Memory Crystal Theta-8 decrypted.",
-      "timeOfCreation": "850.M41"
+      "title": "Plasma Prototype Trials",
+      "inscription": "Early development of plasma weapons.",
+      "scribe": "Forge Lord Axion",
+      "archivingdate": "850.M41",
+      "relicName": "Macro-Plasma Prototype",
+      "locationName": "Forge World Ryza"
     },
     {
-      "name": "Data-Log 100.M41",
-      "information": "First sighting of Explorator Fleet Gamma-7.",
-      "timeOfCreation": "100.M41"
+      "title": "Crystal Encryption Solved",
+      "inscription": "Knowledge unlocked in Memory Crystal.",
+      "scribe": "Explorator Sigma-9",
+      "archivingdate": "100.M41",
+      "relicName": "Memory Crystal Sigma",
+      "locationName": "Explorator Outpost Sigma-9"
     },
     {
-      "name": "Data-Log 500.M41",
-      "information": "Banner of Mars recovered and sanctified.",
-      "timeOfCreation": "500.M41"
+      "title": "The Banner of Mars",
+      "inscription": "Historical significance of Banner Prime.",
+      "scribe": "Mechanicus Historian",
+      "archivingdate": "500.M41",
+      "relicName": "Banner of Mars Prime",
+      "locationName": "Forge World Mars"
     }
   ]
 }
+

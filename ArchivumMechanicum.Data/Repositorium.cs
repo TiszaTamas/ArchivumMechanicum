@@ -57,5 +57,11 @@ namespace ArchivumMechanicum.Data
             ctx.Set<T>().Update(old);
             ctx.SaveChanges();
         }
+
+        public void DeleteAll()
+        {
+            ctx.Set<T>().RemoveRange(ctx.Set<T>());
+            ctx.SaveChanges();
+        }
     }
 }

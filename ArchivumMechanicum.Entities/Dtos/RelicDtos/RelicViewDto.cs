@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace ArchivumMechanicum.Entities.Dtos.RelicDtos
 {
@@ -24,6 +25,7 @@ namespace ArchivumMechanicum.Entities.Dtos.RelicDtos
 
         public string Status { get; set; } = "";
 
+        //[JsonIgnore]
         public IEnumerable<Record>? Records { get; set; }
     }
 }

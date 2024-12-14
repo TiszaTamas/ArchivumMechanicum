@@ -17,7 +17,7 @@ namespace ArchivumMechanicum.Entities.Dtos.LocationDtos
 
         public string Sector { get; set; } = "";
 
-        public int NumberOfRelics { get; set; }
+        public int NumberOfRelics { get; set; } = 0;
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ArchivumMechanicum.Logic.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArchivumMechanicum.Endpoint.Controllers
@@ -7,11 +8,11 @@ namespace ArchivumMechanicum.Endpoint.Controllers
     [Route("api/[controller]")]
     public class DatabaseController : ControllerBase
     {
-        private readonly DatabaseSeeder Seeder;
+        private readonly DatabseLogic Logic;
 
-        public DatabaseController(DatabaseSeeder seeder)
+        public DatabaseController(DatabseLogic logic)
         {
-            Seeder = seeder;
+            Logic = logic;
         }
 
         [HttpPost("populate")]
@@ -19,7 +20,7 @@ namespace ArchivumMechanicum.Endpoint.Controllers
         {
             try
             {
-                await Seeder.PopulateDatabaseAsync();
+                await Logic.PopulateDatabaseAsync();
                 return Ok("Database populated successfully!");
             }
             catch (InvalidOperationException ex)
@@ -30,6 +31,13 @@ namespace ArchivumMechanicum.Endpoint.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
+        }
+
+        [HttpDelete("purge the machine spirit")]
+        [Authorize(Roles ="Admin")]
+        public void ClearDatabase()
+        {
+            Logic.ClearDatabase();
         }
     }
 

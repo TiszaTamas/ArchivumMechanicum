@@ -18,5 +18,7 @@ namespace ArchivumMechanicum.Entities.Dtos.RecordDtos
         public required string Inscription { get; set; } = "";
 
         public required string Scribe { get; set; } = "";
+
+        public required string ArchivingDate { get; set; } = "";
     }
 }

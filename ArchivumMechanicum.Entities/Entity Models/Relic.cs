@@ -41,7 +41,7 @@ namespace ArchivumMechanicum.Entities.Entity_Models
         /// Type of Relic, like archeotech/xenothech/heretekal.
         /// </summary>
         [StringLength(50)]
-        public string Classification { get; set; } //type
+        public string? Classification { get; set; } //type
 
         /// <summary>
         /// Description of the Relic.
@@ -53,7 +53,7 @@ namespace ArchivumMechanicum.Entities.Entity_Models
         /// Current state of damage of the Relic.
         /// </summary>
         [StringLength(50)]
-        public string Status { get; set; } //State of the relic
+        public string? Status { get; set; } //State of the relic
 
         /// <summary>
         /// Records tied to or mentioning said Relic
@@ -72,5 +72,10 @@ namespace ArchivumMechanicum.Entities.Entity_Models
         /// </summary>
         [StringLength(50)]
         public string LocationIdentification { get; set; }
+
+        public Relic()
+        {
+                
+        }
     }
 }

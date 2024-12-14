@@ -57,5 +57,10 @@ namespace ArchivumMechanicum.Entities.Entity_Models
 
         [StringLength(50)]
         public string LocationIdentification { get; set; }
+
+        public Record()
+        {
+                
+        }
     }
 }

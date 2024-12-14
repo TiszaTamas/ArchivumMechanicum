@@ -17,6 +17,5 @@ namespace ArchivumMechanicum.Entities.Dtos.RelicDtos
         public string Classification { get; set; } = "";
 
         public string Status { get; set; } = "";
-
     }
 }
