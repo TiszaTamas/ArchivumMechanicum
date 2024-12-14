@@ -17,8 +17,6 @@ namespace ArchivumMechanicum.Endpoint.Controllers
             this.logic = logic;
         }
 
-
-
         [HttpPost]
         [Authorize]
         public void AddLocation(LocationCreateDto loc)
@@ -41,7 +39,7 @@ namespace ArchivumMechanicum.Endpoint.Controllers
 
         [HttpPut("{id}")]
         [Authorize]
-        public void UpdateLocation(string id, Location loc)
+        public void UpdateLocation(string id, LocationUpdateDto loc)
         {
             logic.UpdateLocation(id, loc);
         }

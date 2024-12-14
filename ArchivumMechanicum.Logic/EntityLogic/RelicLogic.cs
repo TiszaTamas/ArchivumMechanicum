@@ -1,5 +1,7 @@
 ﻿using ArchivumMechanicum.Data;
+using ArchivumMechanicum.Entities.Dtos.RelicDtos;
 using ArchivumMechanicum.Entities.Entity_Models;
+using ArchivumMechanicum.Logic.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +13,21 @@ namespace ArchivumMechanicum.Logic.EntityLogic
     public class RelicLogic
     {
         Repositorium<Relic> Repositorium;
+        DtoProvider dtoProvider;
 
-        public RelicLogic(Repositorium<Relic> repositorium)
+        public RelicLogic(Repositorium<Relic> repositorium, DtoProvider dtoProvider)
         {
             Repositorium = repositorium;
+            this.dtoProvider = dtoProvider;
         }
 
-        public void CreateRelic(Relic rel)
+        public void CreateRelic(RelicCreateDto rel)
         {
-            Relic l = rel;
+            Relic r = dtoProvider.Mapper.Map<Relic>(rel);
 
-            if (Repositorium.GetAll().FirstOrDefault(x => x.Designation == l.Designation) == null)
+            if (Repositorium.GetAll().FirstOrDefault(x => x.Designation== r.Designation) == null)
             {
-                Repositorium.Create(l);
+                Repositorium.Create(r);
             }
             else
             {
@@ -31,16 +35,18 @@ namespace ArchivumMechanicum.Logic.EntityLogic
             }
         }
 
-        public IEnumerable<Relic> ReadAllRelics()
+        public IEnumerable<RelicShortViewDto> ReadAllRelics()
         {
 
-            return Repositorium.GetAll();
+            return Repositorium.GetAll().Select(x =>
+            dtoProvider.Mapper.Map<RelicShortViewDto>(x)
+            );
         }
 
-        public void UpdateRelic(string id, Relic rel)
+        public void UpdateRelic(string id, RelicUpdateDto rel)
         {
             var old = Repositorium.FindById(id);
-            old = rel;
+            dtoProvider.Mapper.Map(rel, old);
             Repositorium.Update(old);
         }
 
@@ -49,10 +55,10 @@ namespace ArchivumMechanicum.Logic.EntityLogic
             Repositorium.DeleteById(id);
         }
 
-        public Relic GetRelicById(string id)
+        public RelicViewDto GetRelicById(string id)
         {
             var rel = Repositorium.FindById(id);
-            return rel;
+            return dtoProvider.Mapper.Map<RelicViewDto>(rel);
         }
     }
 }

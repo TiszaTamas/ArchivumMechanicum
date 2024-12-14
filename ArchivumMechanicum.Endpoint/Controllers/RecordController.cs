@@ -1,5 +1,7 @@
-﻿using ArchivumMechanicum.Entities.Entity_Models;
+﻿using ArchivumMechanicum.Entities.Dtos.RecordDtos;
+using ArchivumMechanicum.Entities.Entity_Models;
 using ArchivumMechanicum.Logic.EntityLogic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArchivumMechanicum.Endpoint.Controllers
@@ -16,31 +18,34 @@ namespace ArchivumMechanicum.Endpoint.Controllers
         }
 
         [HttpPost]
-        public void AddRecord(Record rec)
+        [Authorize]
+        public void AddRecord(RecordCreateDto rec)
         {
             logic.CreateRecord(rec);
         }
 
         [HttpGet]
-        public IEnumerable<Record> GetRecords()
+        public IEnumerable<RecordShortViewDto> GetRecords()
         {
             return logic.ReadAllRecords();
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public void Delete(string id)
         {
             logic.DeleteRecord(id);
         }
 
         [HttpPut("{id}")]
-        public void UpdateRecord(string id, Record rec)
+        [Authorize]
+        public void UpdateRecord(string id, RecordUpdateDto rec)
         {
             logic.UpdateRecord(id, rec);
         }
 
         [HttpGet("{id}")]
-        public Record GetRecord(string id)
+        public RecordViewDto GetRecord(string id)
         {
             return logic.GetRecordById(id);
         }

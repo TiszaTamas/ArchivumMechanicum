@@ -25,12 +25,7 @@ namespace ArchivumMechanicum.Logic.EntityLogic
 
         public void CreateLocation(LocationCreateDto loc)
         {
-            var l = new Location()
-            {
-                Name = loc.Name,
-                Sector = loc.Sector,
-                Custodian = loc.Custodian,
-            };
+            Location l = dtoProvider.Mapper.Map<Location>(loc);
 
             if (Repositorium.GetAll().FirstOrDefault(x => x.Name == l.Name) == null)
             {
@@ -50,10 +45,10 @@ namespace ArchivumMechanicum.Logic.EntityLogic
             );
         }
 
-        public void UpdateLocation(string id,Location loc)
+        public void UpdateLocation(string id,LocationUpdateDto loc)
         {
             var old= Repositorium.FindById(id);
-            old = loc;
+            dtoProvider.Mapper.Map(loc, old);
             Repositorium.Update(old);
         }
 

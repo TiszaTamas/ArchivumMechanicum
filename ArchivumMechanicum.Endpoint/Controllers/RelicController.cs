@@ -1,5 +1,7 @@
-﻿using ArchivumMechanicum.Entities.Entity_Models;
+﻿using ArchivumMechanicum.Entities.Dtos.RelicDtos;
+using ArchivumMechanicum.Entities.Entity_Models;
 using ArchivumMechanicum.Logic.EntityLogic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArchivumMechanicum.Endpoint.Controllers
@@ -16,31 +18,34 @@ namespace ArchivumMechanicum.Endpoint.Controllers
         }
 
         [HttpPost]
-        public void AddRelic(Relic rel)
+        [Authorize]
+        public void AddRelic(RelicCreateDto rel)
         {
             logic.CreateRelic(rel);
         }
 
         [HttpGet]
-        public IEnumerable<Relic> GetRelics()
+        public IEnumerable<RelicShortViewDto> GetRelics()
         {
             return logic.ReadAllRelics();
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public void Delete(string id)
         {
             logic.DeleteRelic(id);
         }
 
         [HttpPut("{id}")]
-        public void UpdateRelic(string id, Relic rel)
+        [Authorize]
+        public void UpdateRelic(string id, RelicUpdateDto rel)
         {
             logic.UpdateRelic(id, rel);
         }
 
         [HttpGet("{id}")]
-        public Relic GetRelic(string id)
+        public RelicViewDto GetRelic(string id)
         {
             return logic.GetRelicById(id);
         }

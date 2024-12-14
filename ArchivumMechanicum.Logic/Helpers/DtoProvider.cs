@@ -25,26 +25,29 @@ namespace ArchivumMechanicum.Logic.Helpers
             this.userManager = userManager;
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Location, LocationShortViewDto>()
-                .AfterMap((src, dest) =>
-                {
-                    if (src.Relics!=null)
-                    {
-                        dest.NumberOfRelics = src.Relics.Count;
-                    }
-                });
-
+                //User
                 cfg.CreateMap<AppUser, UserViewDto>()
                 .AfterMap((src, dest) =>
                 {
                     dest.IsAdmin = userManager.IsInRoleAsync(src, "Admin").Result;
                 });
 
-                
-
-                cfg.CreateMap<Location, LocationViewDto>();
+                //Location
                 cfg.CreateMap<LocationCreateDto, Location>();
+                cfg.CreateMap<Location, LocationShortViewDto>()
+                .AfterMap((src, dest) =>
+                {
+                    if (src.Relics != null)
+                    {
+                        dest.NumberOfRelics = src.Relics.Count;
+                    }
+                });
+                cfg.CreateMap<LocationUpdateDto, Location>();
+                cfg.CreateMap<Location, LocationViewDto>();
 
+                //Relic
+                cfg.CreateMap<RelicCreateDto, Relic>();
+                cfg.CreateMap<Relic, RelicShortViewDto>();
                 cfg.CreateMap<Relic, RelicViewDto>()
                 .AfterMap((src,dest) =>
                 {
@@ -53,11 +56,24 @@ namespace ArchivumMechanicum.Logic.Helpers
                         dest.FoundLocationName = src.Location.Name;
                 }
                 });
-                cfg.CreateMap<Record, RecordShortViewDto>();
-                cfg.CreateMap<RelicCreateDto, Relic>();
+                cfg.CreateMap<RelicUpdateDto, Relic>();
 
-                cfg.CreateMap<Record, RecordViewDto>();
+                //Record
                 cfg.CreateMap<RecordCreateDto, Record>();
+                cfg.CreateMap<Record, RecordShortViewDto>();
+                cfg.CreateMap<RecordUpdateDto, Record>();
+                cfg.CreateMap<Record, RecordViewDto>()
+                .AfterMap((src,dest) =>
+                {
+                    if (src.Location != null)
+                    {
+                        dest.OriginLocationName= src.Location.Name;
+                    }
+                    if (src.Relic != null)
+                    {
+                        dest.TiedRelicName = src.Relic.Designation;
+                    }
+                });
             });
 
             Mapper = new Mapper(config);
